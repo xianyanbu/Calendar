@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易月份介绍</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        window.onload=function()
+        {
+            var arry=["<h2>1月</h2><p>柳月--银柳插瓶头故称“柳月”。</p>","<h2>2月</h2><p>杏月--二月大地吐绿，万物迎春，诗有“二月杏花闹枝头”之句，故称“杏月”。</p>",
+                "<h2>3月</h2><p>桃月--三月是桃花盛开的时节，素有“三月桃花粉面羞”之说，故称“桃月”。</p>","<h2>4月</h2><p>槐月--“四月槐花挂满至”。四月，万物枝长叶茂，青翠欲滴，槐花也绽开黄白色的花瓣，古称“槐月”。</p>",
+                "<h2>5月</h2><p>榴月--“五月榴花红似火”，故称“榴月”。</p>","<h2>6月</h2><p>荷月、伏月--赤日炎炎三伏天，万物无精打采，惟有荷花亭亭玉立，精神抖擞，因而便叫“伏月”与“荷月”。</p>",
+                "<h2>7月</h2><p>巧月--我国妇女在“七月七日”这天向天上“织女星”“乞巧”（乞求心灵手巧）的月份，所以七月就叫“巧月”。</p>",
+                "<h2>8月</h2><p>桂月--八月桂花遍地开，故称“桂月”。</p>",
+                "<h2>9月</h2><p>菊月--九月菊花傲秋霜，称菊月。</p>","<h2>10月</h2><p>阳月--“十月芙蓉小阳春”，故称阳月。</p>",
+                "<h2>11月</h2><p>冬月--葮草吐绿头时节，故又称“葮月”。</p>",
+                "<h2>12月</h2><p>腊月--农历历十二月合祭诸神叫做“腊”，因这一月多数时间都用在祭神、祭祖上，故叫“腊月”。</p>"]
+            var oul=document.getElementById("container");
+            var all_li=oul.getElementsByTagName("li");
+            var oText=document.getElementById("text");
+            for(var i=0;i<all_li.length;i++)
+            {
+                all_li[i].index=i;
+                all_li[i].onmouseover=function()
+                {
+                   for(var i=0;i<all_li.length;i++)
+                   {
+                       all_li[i].style.background="black";
+                       all_li[i].style.color="white";
+                       all_li[i].style.border="1px solid white";
+                   }
+                    this.style.background="white";
+                    this.style.color="red";
+                    this.style.border="1px solid black";
+                    oText.innerHTML=arry[this.index];
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <ul id="month">
+        <li><h3>1</h3> <p><strong>JAN</strong></p> </li>
+        <li><h3>2</h3> <p><strong>FER</strong></p> </li>
+        <li><h3>3</h3> <p><strong>MAR</strong></p> </li>
+        <li><h3>4</h3> <p><strong>APR</strong></p> </li>
+        <li><h3>5</h3> <p><strong>MAY</strong></p> </li>
+        <li><h3>6</h3> <p><strong>JUN</strong></p> </li>
+        <li><h3>7</h3> <p><strong>JUL</strong></p> </li>
+        <li><h3>8</h3> <p><strong>AUG</strong></p> </li>
+        <li><h3>9</h3> <p><strong>SEP</strong></p> </li>
+        <li><h3>10</h3> <p><strong>OCT</strong></p> </li>
+        <li><h3>11</h3> <p><strong>MOV</strong></p> </li>
+        <li><h3>12</h3> <p><strong>DEC</strong></p> </li>
+    </ul>
+    <div id="text"> </div>
+</div>
+</body>
+</html>
